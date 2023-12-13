@@ -163,16 +163,32 @@ void Atol::createCorrectDocuments() {
   double summ = tlv["1031"].toDouble();
   if (summ > 0) {
     payment["type"] = "cash";
-    payment["sum"] = tlv["1031"].toDouble();
+    payment["sum"] = summ;
     payments.append(payment);
   }
 
   summ = tlv["1081"].toDouble();
   if (summ > 0) {
     payment["type"] = "electronically";
-    payment["sum"] = tlv["1031"].toDouble();
+    payment["sum"] = summ;
     payments.append(payment);
   }
+
+  summ = tlv["1215"].toDouble();
+  if (summ > 0) {
+    payment["type"] = "prepaid";
+    payment["sum"] = summ;
+    payments.append(payment);
+  }
+
+  summ = tlv["1216"].toDouble();
+  if (summ > 0) {
+    payment["type"] = "credit";
+    payment["sum"] = summ;
+    payments.append(payment);
+  }
+
+
 
   correct["payments"] = payments;
   correct["total"] = tlv["1020"].toDouble();
