@@ -26,6 +26,7 @@ class Atol : public QObject {
   void printCorrCheckReturnFirst(bool value);
   void printAdditional(bool value);
   void printTeg1192(bool value);
+  void correctText(const QString &txt);
 
   private:
   void resetDocuments();
@@ -39,6 +40,8 @@ class Atol : public QObject {
   bool m_printCorrCheckReturnFirst;
   bool m_printAdditional;
   bool m_printTeg1192;
+
+  QString m_correctText;
 
   std::vector<wchar_t> m_result;
 

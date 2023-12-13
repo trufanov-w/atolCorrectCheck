@@ -18,10 +18,17 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="1" rowspan="2">
-     <widget class="QLabel" name="label_7">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="btnConnect">
       <property name="text">
-       <string>Текущий документ</string>
+       <string>Подключить</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="btnCorrectNext">
+      <property name="text">
+       <string>Исправить следующий документ</string>
       </property>
      </widget>
     </item>
@@ -38,6 +45,13 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="btnCorrectCheck">
+      <property name="text">
+       <string>Исправить документ</string>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="2" rowspan="2">
      <widget class="QLabel" name="lblCurrentDocument">
       <property name="font">
@@ -47,50 +61,6 @@
       </property>
       <property name="text">
        <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="btnConnect">
-      <property name="text">
-       <string>Подключить</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="btnCorrectNext">
-      <property name="text">
-       <string>Исправить следующий документ</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QCheckBox" name="cbPrintCheck">
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
-      </property>
-      <property name="text">
-       <string>Печатать чек</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0" colspan="2">
-     <widget class="QCheckBox" name="cbPriorityReturnCorrCheck">
-      <property name="text">
-       <string>Проводить чек коррекции возврата прихода первым</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="btnCorrectCheck">
-      <property name="text">
-       <string>Исправить документ</string>
       </property>
      </widget>
     </item>
@@ -104,6 +74,13 @@
       </property>
      </widget>
     </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Номер первого чека</string>
+      </property>
+     </widget>
+    </item>
     <item row="5" column="0" colspan="2">
      <widget class="QCheckBox" name="cbPrintCorrReturnCheck">
       <property name="text">
@@ -114,10 +91,16 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QLabel" name="label">
+    <item row="5" column="2">
+     <widget class="QCheckBox" name="cbPrintCheck">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
       <property name="text">
-       <string>Номер первого чека</string>
+       <string>Печатать чек</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -137,6 +120,33 @@
        <bool>true</bool>
       </property>
      </widget>
+    </item>
+    <item row="7" column="0" colspan="2">
+     <widget class="QCheckBox" name="cbPriorityReturnCorrCheck">
+      <property name="text">
+       <string>Проводить чек коррекции возврата прихода первым</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Текущий документ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Основание коррекции</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1" colspan="2">
+     <widget class="QLineEdit" name="leCorrect"/>
     </item>
    </layout>
   </widget>

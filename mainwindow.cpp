@@ -80,3 +80,8 @@ void MainWindow::on_cbTag1192_stateChanged(int arg1) {
     atol->printTeg1192(ui->cbTag1192->isChecked());
 }
 
+
+void MainWindow::on_leCorrect_textChanged(const QString &arg1) {
+    atol->correctText(arg1);
+}
+

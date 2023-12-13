@@ -12,6 +12,7 @@ Atol::Atol(QObject *parent) :
   m_printCorrCheckReturnFirst = true;
   m_printAdditional = false;
   m_printTeg1192 = true;
+  m_correctText = "0";
 }
 
 
@@ -74,6 +75,14 @@ void Atol::printAdditional(bool value) {
 
 void Atol::printTeg1192(bool value) {
   m_printTeg1192 = value;
+}
+
+void Atol::correctText(const QString &txt) {
+  if (txt.isEmpty()) {
+    m_correctText = "0";
+  } else {
+    m_correctText = txt;
+  }
 }
 
 void Atol::resetDocuments() {
@@ -143,7 +152,7 @@ void Atol::createCorrectDocuments() {
   correct["ignoreNonFiscalPrintErrors"] = false;
   correct["correctionType"] = "self";
   correct["correctionBaseDate"] = tlv["1012"].toDateTime().toString("yyyy.MM.dd");
-  correct["correctionBaseNumber"] = "0";
+  correct["correctionBaseNumber"] = m_correctText;
 
   for (int i = 0; i < items.size(); i++) {
     item.clear();
