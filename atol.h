@@ -25,6 +25,7 @@ class Atol : public QObject {
   void printCorrCheck(bool value);
   void printCorrCheckReturnFirst(bool value);
   void printAdditional(bool value);
+  void printTeg1192(bool value);
 
   private:
   void resetDocuments();
@@ -37,6 +38,7 @@ class Atol : public QObject {
   bool m_printCorrCheck;
   bool m_printCorrCheckReturnFirst;
   bool m_printAdditional;
+  bool m_printTeg1192;
 
   std::vector<wchar_t> m_result;
 

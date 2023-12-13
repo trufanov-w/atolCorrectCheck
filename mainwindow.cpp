@@ -75,3 +75,8 @@ void MainWindow::on_cbPrintAdditional_stateChanged(int arg1) {
   atol->printAdditional(ui->cbPrintAdditional->isChecked());
 }
 
+
+void MainWindow::on_cbTag1192_stateChanged(int arg1) {
+    atol->printTeg1192(ui->cbTag1192->isChecked());
+}
+

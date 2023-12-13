@@ -30,7 +30,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 
 linux:!android:!macx: {
-    QMAKE_LFLAGS += -Wl,-rpath,"$$PWD/atol/linux_x64/"
+    QMAKE_LFLAGS += -Wl,-rpath,"$$PWD/libs/linux_x64/"
 
     LIBS += \
         -L$$PWD/atol/linux_x64/ -lfptr10

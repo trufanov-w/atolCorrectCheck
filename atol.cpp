@@ -71,6 +71,10 @@ void Atol::printAdditional(bool value) {
   m_printAdditional = value;
 }
 
+void Atol::printTeg1192(bool value) {
+  m_printTeg1192 = value;
+}
+
 void Atol::resetDocuments() {
   m_sellMap.clear();
   m_sellCorrectionMap.clear();
@@ -148,7 +152,7 @@ void Atol::createCorrectDocuments() {
     item["price"] = items[i].toMap()["1079"].toDouble();
     item["quantity"] = items[i].toMap()["1023"].toDouble();
     item["amount"] = items[i].toMap()["1043"].toDouble();
-    item["measurementUnit"] = "шт.";
+    item["measurementUnit"] = "piece";
 
     tax["type"] = getTaxType(items[i].toMap()["1199"].toInt());
 
@@ -156,7 +160,9 @@ void Atol::createCorrectDocuments() {
 
     itemsCorrect.append(item);
   }
-  itemsCorrect.append(additional);
+  if (m_printTeg1192) {
+    itemsCorrect.append(additional);
+  }
   correct["items"] = itemsCorrect;
 
 
