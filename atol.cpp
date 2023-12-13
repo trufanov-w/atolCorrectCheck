@@ -11,6 +11,7 @@ Atol::Atol(QObject *parent) :
   m_printCorrCheck = true;
   m_printCorrCheckReturnFirst = true;
   m_printAdditional = false;
+  m_printTeg1192 = true;
 }
 
 

@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>572</width>
-    <height>218</height>
+    <height>251</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>POS_ATOL</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="document-revert"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -129,6 +132,9 @@
      <widget class="QCheckBox" name="cbTag1192">
       <property name="text">
        <string>Включить тег 1192</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
