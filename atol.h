@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QDateTime>
+#include <QVariantMap>
 #include <QJsonObject>
 #include <QJsonDocument>
 #include "atol/include/libfptr10.h"

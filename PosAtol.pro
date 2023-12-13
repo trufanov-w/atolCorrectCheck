@@ -30,26 +30,25 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 
 linux:!android:!macx: {
-    QMAKE_LFLAGS += -Wl,-rpath,"$$PWD/libs/linux_x64/"
+    QMAKE_LFLAGS += -Wl,-rpath,"$$PWD/atol/linux_x64/"
 
     LIBS += \
-        -L$$PWD/libs/linux_x64/ -lfptr10
+        -L$$PWD/atol/linux_x64/ -lfptr10
 
     INCLUDEPATH += \
-        $$PWD/libs/linux_x64
+        $$PWD/atol/linux_x64
 
     DEPENDPATH += \
-        $$PWD/libs//linux_x64
+        $$PWD/atol//linux_x64
 }
 
 win32: {
-    LIBS += -lWS2_32 \
-        -luser32 \
-        -L$$PWD/libs/msvc2015_x86 -lfptr10
+    LIBS += \
+        -L$$PWD/atol/msvc2015_x86 -lfptr10
 
     INCLUDEPATH += \
-        $$PWD/libs/msvc2015_x86
+        $$PWD/atol/msvc2015_x86
 
     DEPENDPATH += \
-        $$PWD/libs/msvc2015_x86
+        $$PWD/atol/msvc2015_x86
 }

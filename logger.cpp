@@ -70,7 +70,7 @@ void Logger::writeLogToFile(const QString &message) {
   QFile file(getNextLogFileName());
   if (file.open(QIODevice::ReadWrite | QIODevice::Append)) {
     QTextStream out(&file);
-    out << message << Qt::endl;
+    out << message << endl;
     m_currentFileSize = file.size();
     file.close();
   }
