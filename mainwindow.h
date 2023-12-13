@@ -33,6 +33,8 @@ class MainWindow : public QMainWindow
 
   void on_cbPrintAdditional_stateChanged(int arg1);
 
+  void on_cbTag1192_stateChanged(int arg1);
+
   private:
   Ui::MainWindow *ui;
   Atol *atol;

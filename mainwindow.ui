@@ -125,6 +125,13 @@
       </property>
      </widget>
     </item>
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="cbTag1192">
+      <property name="text">
+       <string>Включить тег 1192</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>
